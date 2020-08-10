@@ -210,11 +210,8 @@ class StringTest {
 
         // TODO: Modify the following code to create new string from original String
         // <--Start
-        StringBuilder tempString = new StringBuilder();
-        for (int i = original.length(); i > 0; i--) {
-            tempString.append(original.charAt(i - 1));
-        }
-        final String reversed = tempString.toString();
+        StringBuilder tempString = new StringBuilder(original);
+        final String reversed = tempString.reverse().toString();
         // --End-->
 
         assertEquals("654321", reversed);
